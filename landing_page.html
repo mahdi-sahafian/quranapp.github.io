@@ -1,0 +1,214 @@
+<!-- landing_page.html -->
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>نرم‌افزار قرآنی!</title>
+    <link rel="icon" type="image/x-icon" href="Q.ico">
+    <link rel="stylesheet" href="landing_page.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <!-- انیمیشن ابتدایی -->
+    <div id="intro-animation">
+        <div id="typing-text"></div>
+    </div>
+
+    <!-- هدر ثابت -->
+    <header class="sticky-header">
+        <div class="header-content">
+            <div class="header-title">
+                <object data="Q.png" type="image/x-icon" class="header-icon" width="40" height="40">
+                    <img src="fallback.png" alt="آیکون قرآن">
+                </object>
+                <span>نرم‌افزار قرآنی</span>
+            </div>
+            <div class="header-subtitle">بروزترین نرم‌افزار قرآنی ویندوز</div>
+        </div>
+    </header>
+
+    <!-- بخش اصلی -->
+    <div class="body">     
+        <div class="name">
+            نرم‌افزار قرآنی،
+            <object data="Q.png" type="image/x-icon" class="icon" width="80" height="80">
+                <img src="fallback.png" alt="آیکون قرآن">
+            </object>
+        </div>
+        
+        <div class="info">بروزترین نرم‌افزار قرآنی ویندوز</div>
+        
+        <div class="features">
+            <div class="feature">
+                <div class="feature-icon">
+                    <object data="icons/book-open-svgrepo-com.png" type="image/x-icon" class="icon" width="80" height="80">
+                        <img src="fallback.png" alt="آیکون قرآن">
+                    </object>    
+                </div>
+                <div class="feature-text">6 ترجمه مختلف</div>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">
+                    <object data="icons/play-svgrepo-com.png" type="image/x-icon" class="icon" width="80" height="80">
+                        <img src="fallback.png" alt="آیکون قرآن">
+                    </object>    
+                </div>
+                <div class="feature-text">10 تلاوت از قاریان برجسته</div>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">
+                    <object data="icons/setting-svgrepo-com.png" type="image/x-icon" class="icon" width="80" height="80">
+                        <img src="fallback.png" alt="آیکون قرآن">
+                    </object>
+                </div>
+                <div class="feature-text">رابط کاربری آسان و روان</div>
+            </div>
+        </div>
+        <div class="button-group">
+            <button class="download-btn" onclick="window.open('https://ble.ir/join/ExKs1Hmmij', '_blank')">
+                دانلود رایگان
+            </button>
+            <button class="empty-btn" onclick="window.location.href='http://127.0.0.1:5000'">
+                اجرا برنامه
+            </button>
+        </div>
+        
+        <div class="version">نسخه ۱.۰.۰ - سازگار با ویندوز </div>
+    </div>
+
+    <!-- بخش نمودارها -->
+    <section class="charts-section">
+        <div class="container">
+            <h2 class="section-title">مقایسه با محصولات مشابه</h2>
+            
+            <div class="charts-grid">
+                
+                <!-- نمودار ۳: سرعت اجرا -->
+                <div class="chart-container">
+                    <h3>مقایسه کیفی</h3>
+                    <canvas id="speedChart"></canvas>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+        <!-- بعد از بخش نمودارها و قبل از بخش اطلاعات بیشتر اضافه کنید -->
+    <section class="comparison-section">
+        <div class="container">
+            <h2 class="section-title">مقایسه امکانات</h2>
+
+            <div class="comparison-table">
+                <div class="table-header">
+                    <div class="feature-col">امکانات</div>
+                    <div class="app-col">نرم‌افزار قرآنی</div>
+                    <div class="app-col">ترجمه خواندنی قرآن</div>
+                </div>
+
+                <div class="table-row">
+                    <div class="feature-col">ترجمه‌های متعدد</div>
+                    <div class="app-col check">✓ (6 ترجمه)</div>
+                    <div class="app-col cross">✗ (1 ترجمه)</div>
+                </div>
+
+                <div class="table-row">
+                    <div class="feature-col">امکان اسکرول در قرآن</div>
+                    <div class="app-col check">✓</div>
+                    <div class="app-col cross">✗</div>
+                </div>
+
+                <div class="table-row">
+                    <div class="feature-col">تم‌های مختلف</div>
+                    <div class="app-col check">✓ (7 تم)</div>
+                    <div class="app-col cross">✗ (1 تم)</div>
+                </div>
+                
+                <div class="table-row">
+                    <div class="feature-col">رابط کاربری مدرن</div>
+                    <div class="app-col check">✓</div>
+                    <div class="app-col cross">✗</div>
+                </div>
+
+                <div class="table-row">
+                    <div class="feature-col">نمایش همزمان متن و ترجمه</div>
+                    <div class="app-col cross">✗</div>
+                    <div class="app-col check">✓</div>
+                </div>
+
+                <div class="table-row">
+                    <div class="feature-col">نمایش لیست سوره ها و امکان انتخاب</div>
+                    <div class="app-col cross">✗</div>
+                    <div class="app-col check">✓</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- بخش اطلاعات بیشتر -->
+    <footer class="more-info">
+        <div class="container">
+            <h2 class="options">نرم‌افزار قرآنی 1403-1404</h2>
+            <h4 class="team">اعضای تیم:
+                مهدی صحافیان   ،
+                کوروش احدزاده  ،
+                برادران فراهانی  ،
+                بهراد صفری نژاد  ،
+                امیر محمد افشار
+            </h4>
+
+            <h2 class="options">با تشکر از:</h2>
+            <h4 class="team">استاد هداوندی،   استاد اسدی</h4>
+        </div>
+    </footer>
+
+    <script src="charts.js"></script>
+    <script>
+        // انیمیشن تایپ و نمایش صفحه
+        document.addEventListener('DOMContentLoaded', function() {
+            const intro = document.getElementById('intro-animation');
+            const typingText = document.getElementById('typing-text');
+            const mainContent = document.querySelector('.body');
+            const header = document.querySelector('.sticky-header');
+            const chartsSection = document.querySelector('.charts-section');
+            const moreInfo = document.querySelector('.more-info');
+            
+            // مخفی کردن محتوای اصلی در ابتدا
+            mainContent.style.opacity = '0';
+            header.style.opacity = '0';
+            chartsSection.style.opacity = '0';
+            moreInfo.style.opacity = '0';
+            
+            const text = "نرم افزار قرآنی";
+            let i = 0;
+            
+            function typeWriter() {
+                if (i < text.length) {
+                    typingText.innerHTML += text.charAt(i);
+                    i++;
+                    setTimeout(typeWriter, 150);
+                } else {
+                    // پس از اتمام تایپ، انیمیشن لوگو و نمایش صفحه
+                    setTimeout(() => {
+                        intro.style.opacity = '0';
+                        setTimeout(() => {
+                            intro.style.display = 'none';
+                            // نمایش تدریجی محتوای اصلی
+                            mainContent.style.transition = 'opacity 1s ease';
+                            header.style.transition = 'opacity 1s ease';
+                            chartsSection.style.transition = 'opacity 1s ease';
+                            moreInfo.style.transition = 'opacity 1s ease';
+                            
+                            mainContent.style.opacity = '1';
+                            header.style.opacity = '1';
+                            chartsSection.style.opacity = '1';
+                            moreInfo.style.opacity = '1';
+                        }, 500);
+                    }, 1000);
+                }
+            }
+            
+            typeWriter();
+        });
+    </script>
+</body>
+</html>

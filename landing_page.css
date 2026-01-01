@@ -1,0 +1,484 @@
+/* landing_page.css */
+@font-face {
+    font-family: 'Nabi';
+    src: url('Nabi.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Neirizi';
+    src: url('Neirizi.ttf') format('truetype');
+}
+
+/* استایل پایه */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+/* انیمیشن ابتدایی */
+#intro-animation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #078f94 0%, #06ad97 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    transition: opacity 0.5s ease;
+}
+
+#typing-text {
+    font-family: 'Nabi', Tahoma;
+    font-size: 3rem;
+    color: white;
+    border-right: 3px solid white;
+    animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+    0%, 100% { border-color: white; }
+    50% { border-color: transparent; }
+}
+
+/* هدر ثابت */
+.sticky-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(135deg, #078f94 0%, #06ad97 100%);
+    color: white;
+    padding: 15px 0;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
+
+.header-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-title {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-family: 'Nabi', Tahoma;
+    font-size: 24px;
+}
+
+.header-subtitle {
+    font-family: 'Neirizi';
+    font-size: 16px;
+    opacity: 0.9;
+}
+
+.header-icon {
+    filter: brightness(0) invert(1);
+}
+
+/* بخش اصلی */
+.body {
+    background: linear-gradient(135deg, #e0f7fa 0%, #b2ebf2 100%);
+    margin: 0;
+    padding: 100px 20px 50px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.name {
+    font-family: 'Nabi', Tahoma;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    color: #078f94;
+    font-size: 3.5rem;
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+}
+
+.info {
+    font-family: 'Neirizi';
+    color: #06ad97;
+    font-size: 1.3rem;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.icon {
+    filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.2));
+    transition: transform 0.3s ease;
+}
+
+.icon:hover {
+    transform: scale(1.1) rotate(30deg);
+}
+
+/* ویژگی‌های اصلی */
+.features {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.feature {
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    text-align: center;
+    min-width: 150px;
+    transition: transform 0.3s ease;
+}
+
+.feature:hover {
+    transform: translateY(-5px);
+}
+
+.feature-icon {
+    font-size: 24px;
+    margin-bottom: 10px;
+    filter: brightness(0) saturate(100%) invert(35%) sepia(80%) saturate(800%) hue-rotate(140deg);
+}
+
+.feature-text {
+    font-family: 'Neirizi';
+    color: #078f94;
+    font-size: 1.1rem;
+}
+
+/* گروه دکمه‌ها */
+.button-group {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.download-btn {
+    background: linear-gradient(45deg, #078f94, #06ad97);
+    color: white;
+    border: none;
+    padding: 15px 40px;
+    font-family: 'Neirizi';
+    font-size: 1.1rem;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(7, 143, 148, 0.3);
+}
+
+.download-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(7, 143, 148, 0.4);
+}
+
+.empty-btn {
+    background: transparent;
+    color: #078f94;
+    border: 2px solid #078f94;
+    padding: 15px 40px;
+    font-family: 'Neirizi';
+    font-size: 1.1rem;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.empty-btn:hover {
+    background: #078f94;
+    color: white;
+    transform: translateY(-3px);
+}
+
+.version {
+    font-family: 'Neirizi';
+    color: #888;
+    font-size: 14px;
+    margin-top: 20px;
+}
+
+.decoration {
+    position: absolute;
+    font-size: 120px;
+    color: rgba(7, 143, 148, 0.1);
+    z-index: -1;
+    animation: float 6s linear infinite;
+}
+
+.decoration:nth-child(1) {
+    top: 10%;
+    left: 10%;
+}
+
+.decoration:nth-child(2) {
+    bottom: 10%;
+    right: 10%;
+}
+
+.decoration:nth-child(3) {
+    top: 10%;
+    right: 10%;
+}
+
+.decoration:nth-child(4) {
+    bottom: 10%;
+    left: 10%;
+}
+
+@keyframes float {
+    0% { transform: translateY(0px) rotate(0deg); }
+    100% { transform: translateY(0px) rotate(360deg); }
+}
+
+/*CHART*/
+.charts-section {
+    padding: 80px 20px;
+    background: #f8f9fa;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section-title {
+    font-family: 'Nabi', Tahoma;
+    text-align: center;
+    color: #078f94;
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+}
+
+.charts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+.chart-container {
+    background: white;
+    padding: 30px;
+    margin: 10%;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.chart-container h3 {
+    font-family: 'Neirizi';
+    color: #078f94;
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+}
+
+/* بخش اطلاعات بیشتر */
+.more-info {
+    padding: 80px 20px;
+    background: white;
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.info-card {
+    background: #f8f9fa;
+    padding: 30px;
+    border-radius: 15px;
+    border-right: 4px solid #078f94;
+    transition: transform 0.3s ease;
+}
+
+.info-card:hover {
+    transform: translateY(-5px);
+}
+
+.info-card h4 {
+    font-family: 'Neirizi';
+    color: #078f94;
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+}
+
+.info-card p {
+    font-family: 'Neirizi';
+    color: #666;
+    line-height: 1.6;
+}
+
+.options {
+    font-family: 'Neirizi';
+    align-items: center;
+    color: #078f94;
+    font-size: 1.4rem;
+    text-align: center;
+
+    
+}
+
+.team{
+    font-family: 'Neirizi';
+    color: #559294;
+    text-align: center;
+}
+
+/* ریسپانسیو */
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+    
+    .name {
+        font-size: 40px;
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .charts-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .feature {
+        min-width: 120px;
+    }
+    
+    .button-group {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    #typing-text {
+        font-size: 2rem;
+    }
+}
+
+/* بخش مقایسه */
+.comparison-section {
+    padding: 80px 20px;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+}
+
+.comparison-table {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    margin-top: 30px;
+}
+
+.table-header {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    background: linear-gradient(135deg, #078f94 0%, #06ad97 100%);
+    color: white;
+    padding: 20px;
+    font-family: 'Neirizi';
+    font-weight: bold;
+    text-align: center;
+}
+
+.table-row {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    padding: 20px;
+    border-bottom: 1px solid #eee;
+    transition: background-color 0.3s ease;
+    font-family: 'Neirizi';
+}
+
+.table-row:hover {
+    background-color: #f8f9fa;
+}
+
+.table-row:last-child {
+    border-bottom: none;
+}
+
+.feature-col {
+    padding: 10px 20px;
+    color: #333;
+    border-right: 2px solid #f0f0f0;
+}
+
+.app-col {
+    padding: 10px 20px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.check {
+    color: #28a745;
+    font-size: 1.2rem;
+}
+
+.cross {
+    color: #dc3545;
+    font-size: 1.2rem;
+}
+
+/* ریسپانسیو برای جدول */
+@media (max-width: 768px) {
+    .table-header,
+    .table-row {
+        grid-template-columns: 1fr;
+        gap: 10px;
+        text-align: center;
+    }
+    
+    .feature-col {
+        border-right: none;
+        border-bottom: 1px solid #f0f0f0;
+        padding-bottom: 15px;
+        margin-bottom: 10px;
+    }
+    
+    .app-col {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 8px 20px;
+    }
+    
+    .app-col::before {
+        content: attr(data-label);
+        font-weight: normal;
+        color: #666;
+    }
+}
+
+/* برای نمایش بهتر در موبایل */
+@media (max-width: 768px) {
+    .app-col[data-label]:before {
+        content: attr(data-label);
+        font-weight: normal;
+        color: #666;
+        margin-left: 10px;
+    }
+}
